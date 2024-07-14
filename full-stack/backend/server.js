@@ -3,6 +3,12 @@ import express from 'express';
 
 const app=express();
 
+//if dist folder form frontend is here then =>
+  // app.use(express.static('dist')) ---this is middleware
+// this is not a good practice bcoz no changes from backend when pushed and if we make changes in frontend then also no changes 
+// 2. so we need to do changes in frontend and then we need to re build and  then changes will appear
+// So restart everything
+
 app.get('/',(req,res)=>{
     res.send('Server is ready')  ;  
 });
